@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://kit.fontawesome.com/6c042f20ba.js" crossorigin="anonymous"></script>
+    <script src="app.js" defer></script>
+    <script src="selector.js" defer></script>
+  <title>Library</title>    
+</head>
+<nav>
+  <div class="nav__container">
+    <div class="logo__container">
+      <img class="logo" src="./Assets/Movies.gif" alt="">
+      <h1 class="title">David's Theater</h1>
+    </div>
+    <ul class="nav__links">
+      <li>
+        <a href="#" class="nav__link">Home</a>
+      </li>
+      <li>
+        <a href="#" class="nav__link">About</a>
+      </li>
+      <li>
+        <a href="#" class="nav__link nav__link--primary">Movies</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<body>
+
+  <main id="selector">
+    <section>
+      <div class="container">
+        <div class="selector__row">
+          <div class="movies__header">
+            <h2 class="section__title shows__header--title">
+              All <span class="coloring">Shows</span>
+            </h2>
+            <select id="filter" onchange="filterMovies(event)">
+              <option value="disable selected">Sort</option>
+              <option value="Year">Year</option>
+              <option value="Title">Title</option>
+              </select>
+          </div>
+        <div class="movies movies__loading">
+          <i class="fas fa-spinner movies__loading--spinner" onchange="renderMovies(event)"></i>
+        </div>  
+            <div class="movies__Wrapper">
+              <img src="" alt="" class="movie__poster"></h2>
+              <h2 class="movie__title"></h2>
+              <p class="movie__year"></p>
+              <p class="movie__imdbID"></p>
+          </div>
+      </div>
+      </div>
+    </section>
+  </main>
+
+
+  <footer>
+    <div class="footer__container">
+      <div class="footer__row">
+        <div class="footer__logo--container">
+             <figure class="footer__logo">
+            <a href="#">
+              <img src="./Assets/Movies.gif" class="footer__logo--img" alt=""></img>
+            </figure>
+            <h3 class="footer__title">David's Theater</h3>
+          </a>
+        </div>
+      <div class="footer__links">
+      <a href="#" class="footer__link">Home</a>
+      <a href="" class="footer__link no-cursor">About</a>
+      <a href="" class="footer__link no-cursor">Movies</a>
+      </div>
+      <div class="footer__copyright">Copyright &copy; 2025 David P. Birch.  All Rights Reserved.</div>
+      </div>
+      </div>
+       </footer>
+</body>
+</html>
