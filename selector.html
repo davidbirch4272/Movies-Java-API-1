@@ -36,9 +36,13 @@
       <div class="container">
         <div class="selector__row">
           <div class="movies__header">
-            <h2 class="section__title shows__header--title">
+            <h2 class="section__title">
               All <span class="coloring">Shows</span>
             </h2>
+            <div class="search__header">
+              <input type="text" class="search__bar" placeholder = "Movies (The Fast & Furious Series)"></input>
+                    <i class="fa-solid fa-magnifying-glass" onclick="renderMovies()"></i>
+            </div>
             <select id="filter" onchange="filterMovies(event)">
               <option value="disable selected">Sort</option>
               <option value="Year">Year</option>
@@ -49,7 +53,7 @@
           <i class="fas fa-spinner movies__loading--spinner" onchange="renderMovies(event)"></i>
         </div>  
             <div class="movies__Wrapper">
-              <img src="" alt="" class="movie__poster"></h2>
+              <img src="" alt="" class="movie__poster"></img>
               <h2 class="movie__title"></h2>
               <p class="movie__year"></p>
               <p class="movie__imdbID"></p>

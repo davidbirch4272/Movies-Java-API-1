@@ -55,6 +55,10 @@
     text-decoration: none;
   }
 
+  .nav__link--about {
+    cursor: not-allowed;
+  }
+
    /* Searcher */
 
    .container {
@@ -85,16 +89,16 @@
 
    .search__header {
     width: 100%;
-    max-width: 240px;
+    max-width: 900px;
     height: 68px;
-    top: 10%;
-    left: 43%;
-    position: absolute;
     display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
        }
    
    .search__bar {
     width: 100%;
+    max-width: 300px;
     height:  64px;
     position: absolute;
     border-radius: 500px;
@@ -119,6 +123,7 @@
  }
   .selector__row {
   padding: 0px 32px;
+  height: 432px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -128,7 +133,8 @@
 
 .movies__header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     padding: 0 16px;
     
 }

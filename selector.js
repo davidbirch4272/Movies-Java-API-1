@@ -4,13 +4,16 @@ let movies;
 
 async function renderMovies(filter) {
 
+  const movieTitle = document.querySelector(" .search__bar").value
+
   const movieListEl = document.querySelector(".movies__Wrapper");
 
   async function main() {
-  const movies = (await fetch("https://www.omdbapi.com/?apikey=b5972967&s=fast&Furious"));
+  const movies = (await fetch(`https://www.omdbapi.com/?apikey=b5972967&s=${movieTitle}`));
   const moviesData = await movies.json();
-  movieListEl.innerHTML = moviesData.map((imdbID) => userHTML(imdbID)).join("");
-  console.log(Array.isArray(moviesData))
+  console.log(renderMovies)
+  movieListEl.innerHTML = moviesData.Search.map((imdbID) => userHTML(imdbID)).join("");
+  
   }
   
   movieListEl.classList += ' movies__loading'
@@ -28,26 +31,25 @@ else if (filter === 'Title') {
   movies.sort((a, b) => a.Title - b.Title);
   }
 
-const moviesHtml = imdbID.
-  map((imdbID) => {
-  return `<div class="movie">
-  <figure class="movies__wrapper">
-  <img class="movie__poster" src="${imdbID.Poster}" alt="">
-  </figure>
-  <div class="movie__title">
-    ${imdbID.Title}
-  </div>
-  <div class="movie__year">
-    ${imdbID.Year}
-  </div>
-  <div class="movie__imdbID">
-  ${imdbID.imdbID}
-  </div>
-  </div>`
-  })
-  .join("");
+  function userHTML(imdbID) {
 
-  moviesWrapper.innerHTML = moviesHtml;
+    return `<div class="movie">
+    <figure class="movies__wrapper">
+    <img class="movie__poster" src="${imdbID.Poster}" alt="">
+    </figure>
+    <div class="movie__title">
+    ${imdbID.Title}
+    </div>
+    <div class="movie__year">
+    ${imdbID.Year}
+    </div>
+    <div class="movie__imdbID">
+    ${imdbID.imdbID}
+    </div>
+    </div>`
+    }
+  
+  movieListEl.innerHTML = moviesHtml;
 } 
 
 function filterMovies(event) {
