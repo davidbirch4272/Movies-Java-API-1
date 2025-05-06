@@ -68,6 +68,9 @@
    }
     .row {
     padding: 0px 32px;
+    margin: 0px 32px;
+    width: 100%;
+    max-width: 1200px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -75,14 +78,8 @@
    }
 
    .background__picture {
-    padding: 2px 0;
-    top: 0px;
-    left: 0%;
-    width: 100%;
-    max-width: 900px;
-    position: relative;
     height: 424px;
-    z-index: -100;
+    
 }    
 
 /* Stopper Control */
@@ -90,10 +87,12 @@
    .search__header {
     width: 100%;
     max-width: 900px;
+    padding: 0px 32px;
+    margin: 0px 32px;
     height: 68px;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
        }
    
    .search__bar {
@@ -101,6 +100,7 @@
     max-width: 300px;
     height:  64px;
     position: absolute;
+    text-align: center;
     border-radius: 500px;
     border-width: 2px;
     border-style: solid;
@@ -110,45 +110,40 @@
 
 .fa-solid {
     z-index: 102;
-    transform: translateX(208px) translateY(24px);
+    transform: translateX(135px) translateY(4px);
     
 }
 
 /* Movies HTML */
 
-.container {
+.selector__container {
   padding: 8px 0;
-  height: 432px;
+  height: 1800px;
 
  }
   .selector__row {
   padding: 0px 32px;
-  height: 432px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
+  width: 100%;
+  /*max-width: 1200px;*/
+  height: 1799px;
   }
 
 
 .movies__header {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    padding: 0 16px;
+    margin: 0 auto;
+    padding: 0 24px;
     
 }
 
 .movie__poster {
   max-height: 380px;
   transition: all 300ms ease;
-  cursor: not-allowed;
-  object-fit: contain;
-  object-position: left;
+  /*cursor: not-allowed;*/
+  
 }
-
-
-
 
 select {
     background-color: #ffff;
@@ -162,6 +157,37 @@ select {
     width: 100%;
     max-width: 200px;
 }
+
+
+.movies__Wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.movie {
+  width: 25%;
+  padding: 24px;
+  transition: all 300ms ease;
+}
+
+.movie__title, .movie__year, .movie__imdbID {
+font-size: 20px;
+margin-bottom: 8px;
+}
+
+.movie:hover {
+  transform: translateY(-4px);
+
+}
+
+
+
+
+
+
+
 
 
 

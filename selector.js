@@ -1,6 +1,6 @@
 //https://www.omdbapi.com/?apikey=b5972967&s=new
 let movies;
-
+let Search;
 
 async function renderMovies(filter) {
 
@@ -9,11 +9,10 @@ async function renderMovies(filter) {
   const movieListEl = document.querySelector(".movies__Wrapper");
 
   async function main() {
-  const movies = (await fetch(`https://www.omdbapi.com/?apikey=b5972967&s=${movieTitle}`));
+  const movies = (await fetch(`https://www.omdbapi.com/?apikey=b5972967&s=${ movieTitle }`));
   const moviesData = await movies.json();
-  console.log(renderMovies)
+  console.log(moviesData)
   movieListEl.innerHTML = moviesData.Search.map((imdbID) => userHTML(imdbID)).join("");
-  
   }
   
   movieListEl.classList += ' movies__loading'
@@ -25,10 +24,10 @@ if (!movies) {
   movieListEl.classList.remove('movies__loading')
 
 if (filter === 'Year') {
-   movies.sort((a, b) => a.Year - b.Year);
+   Search.sort((a, b) => a.Year - b.Year);
    }
 else if (filter === 'Title') {
-  movies.sort((a, b) => a.Title - b.Title);
+   Search.sort((a, b) => a.Title - b.Title);
   }
 
   function userHTML(imdbID) {

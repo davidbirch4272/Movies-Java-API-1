@@ -24,11 +24,6 @@ function userHTML(imdbID) {
         <p>${imdbID.Year}</p>
         <p>${imdbID.Type}</p>
         <p>${imdbID.imdbID}</p>
-        
-        <p><b>Website:</b> <a href="https://${user.website}" target="_blank">
-        ${user.website}
-        </a></p>
-
         </div>
         </div>`;
     
