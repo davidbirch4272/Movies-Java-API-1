@@ -10,6 +10,7 @@
     <script src="selector.js" defer></script>
   <title>Library</title>    
 </head>
+<body id="movie__selector" class="menu--open">
 <nav>
   <div class="nav__container">
     <div class="logo__container">
@@ -27,28 +28,44 @@
         <a href="#" class="nav__link nav__link--primary">Movies</a>
       </li>
     </ul>
-  </div>
+    <button class="btn__menu" onclick="openMenu()">
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="menu__backdrop">
+      <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+        <i class="fas fa-times"></i>
+      </button>
+      <ul class="menu__links">
+        <li class="menu__list">
+          <a href="#" class="menu__link" onclick="closeMenu()">Home</a>
+        </li>
+        <li class="menu__list">
+          <a class="menu__link no-cursor" onclick="closeMenu()">About</a>
+          </li>
+        <li class="menu__list">
+          <a href="#" class="menu__link" onclick="closeMenu()">Movies</a>
+          </li>
+      </ul>
+    </div>
+ </div>
 </nav>
-<body>
 
   <main id="selector">
     <section>
       <div class="selector__container">
         <div class="selector__row">
           <div class="movies__header">
-            <h2 class="section__title">
-              All <span class="coloring">Shows</span>
-            </h2>
+            <h2 class="section__title">All <span class="coloring">Shows</span></h2>
             <div class="search__header">
-              <input type="text" class="search__bar" placeholder = "Movies (The Fast & Furious Series)"></input>
-                    <i class="fa-solid fa-magnifying-glass" onclick="renderMovies()"></i>
-            </div>
-            <select id="filter" onchange="filterMovies(event)">
-              <option value="disable selected">Sort</option>
-              <option value="Year">Year</option>
-              <option value="Title">Title</option>
-              </select>
+            <input type="text" class="search__bar" placeholder = "Movies (The Fast & Furious Series)"></input>
+                  <i class="fa-solid fa-magnifying-glass" onclick="renderMovies()"></i>
           </div>
+              <select id="filter" onchange="filterMovies(event)">
+                <option value="disable selected">Sort</option>
+                <option value="NEW_TO_OLD">New to Old</option>
+                <option value="OLD_TO_NEW">Old to New</option>
+                </select>
+            </div>
         <div class="movies movies__loading">
           <i class="fas fa-spinner movies__loading--spinner" onchange="renderMovies(event)"></i>
         </div>  
@@ -62,6 +79,7 @@
       </div>
     </section>
   </main>
+
 
 
   <footer>
