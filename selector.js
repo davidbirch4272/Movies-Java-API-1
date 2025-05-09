@@ -30,7 +30,7 @@ movieListEl.innerHTML = moviesData.Search.map((imdbID) => userHTML(imdbID)).join
 function userHTML(imdbID) {
   
     return `<div class="movie">
-    <figure class="movies__wrapper">
+    <figure class="movies__Wrapper">
     <img class="movie__poster" src="${imdbID.Poster}" alt="">
     </figure>
     <div class="movie__title">
@@ -45,7 +45,7 @@ function userHTML(imdbID) {
     </div>`
     }
   
-function filterMovies(event) {
+  function filterMovies(event) {
   renderMovies(event.target.value);
   }
 
