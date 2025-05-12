@@ -7,7 +7,7 @@ async function renderMovies(filter = "") {
 movieListEl.innerHTML = `<i class="fas fa-spinner movies__loading--spinner"></i>`;
 
   const movies = await fetch(
-    `https://www.omdbapi.com/?apikey=b5972967&s=${ movieTitle.trim()}`
+    `https://www.omdbapi.com/?apikey=b5972967&s=${movieTitle.value.trim()}`
   );
  
   const moviesData = await movies.json();  
@@ -47,9 +47,6 @@ function userHTML(movie) {
     renderMovies(event.target.value);
   }
 
-setTimeout(() => {
-renderMovies();
-});
 
 
 
