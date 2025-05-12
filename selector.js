@@ -6,13 +6,15 @@ async function renderMovies(filter) {
 
   const movieListEl = document.querySelector(".movies__Wrapper");
 
-  
+  const spinner = document.querySelector(".fa-spinner");
+
+  movieListEl.classList += ' movies__loading'
+
   const movies = await fetch(`https://www.omdbapi.com/?apikey=b5972967&s=${ movieTitle }`);
-  const moviesData = await movies.json();
+  const moviesData = await movies.json();  
+  
   console.log(moviesData)
 
-
-movieListEl.classList += ' movies__loading'
 
 movieListEl.classList.remove('movies__loading')
 

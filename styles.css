@@ -121,6 +121,8 @@
     color: white;
   }
 
+
+
      /* Searcher */
 
    .container {
@@ -168,11 +170,11 @@
     border-width: 2px;
     border-style: solid;
     border-color: rgb(229, 231, 235);
-    z-index: 100;
+    z-index: 98;
 }
 
 .fa-solid {
-    z-index: 102;
+    z-index: 98;
     transform: translateX(135px) translateY(4px);
     
 }
@@ -256,7 +258,6 @@ margin-bottom: 8px;
   display: block !important;
 }
 
-
 .fa-spinner {
   animation: rotate 600ms infinite linear;
 }
@@ -276,6 +277,8 @@ margin-bottom: 8px;
     transform: rotate(360deg);
   }
 }
+
+
 
 /* Footer */
 
@@ -389,9 +392,6 @@ flex-direction: column;
 
 }
 
-
-
-
 /* SMALL PHONES, LARGE SMARTPHONES */
 @media (max-width: 487px) {   
 
@@ -403,6 +403,13 @@ flex-direction: column;
     display: block;
   }
 
+  .selector__container {
+    height: 710vh;
+  }
+
+  .selector__row {
+    height: 709vh;
+  }
 
 
 

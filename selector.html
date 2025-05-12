@@ -11,7 +11,7 @@
     <script src="selector.js" defer></script>
   <title>Library</title>    
 </head>
-<body id="movie__selector" class="menu--open">
+<body id="movie__selector">
 <nav>
   <div class="nav__container">
     <div class="logo__container">
@@ -38,7 +38,7 @@
       </button>
       <ul class="menu__links">
         <li class="menu__list">
-          <a href="#" class="menu__link" onclick="closeMenu()">Home</a>
+          <a href="index.html" class="menu__link" onclick="closeMenu()">Home</a>
         </li>
         <li class="menu__list">
           <a class="menu__link no-cursor" onclick="closeMenu()">About</a>
@@ -67,7 +67,7 @@
                 <option value="OLD_TO_NEW">Old to New</option>
                 </select>
             </div>
-        <div class="movies movies__loading">
+        <div class="movies">
           <i class="fas fa-spinner movies__loading--spinner" onchange="renderMovies(event)"></i>
         </div>  
             <div class="movies__Wrapper">
