@@ -3,20 +3,12 @@
 async function renderMovies(filter) {
 
   const movieTitle = document.querySelector(" .search__bar").value
-
-  const movieListEl = document.querySelector(".movies__Wrapper");
-
-  const spinner = document.querySelector(".fa-spinner");
-
-  movieListEl.classList += ' movies__loading'
-
-  const movies = await fetch(`https://www.omdbapi.com/?apikey=b5972967&s=${ movieTitle }`);
-  const moviesData = await movies.json();  
   
-  console.log(moviesData)
-
-
-movieListEl.classList.remove('movies__loading')
+  const movieListEl = document.querySelector(".movies__Wrapper");
+  
+  const movies = await fetch(`https://www.omdbapi.com/?apikey=b5972967&s=${ movieTitle }`);
+ 
+  const moviesData = await movies.json();  
 
 if(filter === 'NEW_TO_OLD') {
   moviesData.Search.sort((a, b) => b.Year - a.Year)
@@ -48,12 +40,15 @@ function userHTML(imdbID) {
     }
   
   function filterMovies(event) {
-  renderMovies(event.target.value);
+    renderMovies(event.target.value);
   }
 
 setTimeout(() => {
 renderMovies();
-});
+}, 2000);
+
+
+
 
 
 

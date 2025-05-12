@@ -245,40 +245,6 @@ font-size: 20px;
 margin-bottom: 8px;
 }
 
-.movie:hover {
-  transform: translateY(-4px);
-
-}
-
-.movies__loading--spinner {
-  display: none !important;
-}
-
-.movies__loading .movies__loading--spinner {
-  display: block !important;
-}
-
-.fa-spinner {
-  animation: rotate 600ms infinite linear;
-}
-
-.fa-spinner {
-  position: absolute;
-  top: 600px;
-  left: 600px;
-  
-}
-@keyframes rotate {
-  0% {
-    transform: rotate(0);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-
 
 /* Footer */
 
