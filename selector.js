@@ -1,27 +1,31 @@
 //https://www.omdbapi.com/?apikey=b5972967&s=new
 
-async function renderMovies(filter) {
-
-  const movieTitle = document.querySelector(" .search__bar").value
-  
+async function renderMovies(filter = "") {
+  const movieTitle = document.querySelector(".search__bar");
   const movieListEl = document.querySelector(".movies__Wrapper");
   
-  const movies = await fetch(`https://www.omdbapi.com/?apikey=b5972967&s=${ movieTitle }`);
+movieListEl.innerHTML = `<i class="fas fa-spinner movies__loading--spinner"></i>`;
+
+  const movies = await fetch(
+    `https://www.omdbapi.com/?apikey=b5972967&s=${ movieTitle.trim()}`
+  );
  
   const moviesData = await movies.json();  
 
 if(filter === 'NEW_TO_OLD') {
-  moviesData.Search.sort((a, b) => b.Year - a.Year)
+  moviesData.Search.sort((a, b) => parseInt(b.Year) - parseInt(a.Year));
 }
 if(filter === 'OLD_TO_NEW') {
-  moviesData.Search.sort((a, b) => a.Year - b.Year)
+  moviesData.Search.sort((a, b) => parseInt(a.Year) - parseInt(b.Year));
 }
 
-movieListEl.innerHTML = moviesData.Search.map((imdbID) => userHTML(imdbID)).join("");
+const moviesHTML =  moviesData.Search.map((movie) => userHTML(movie)).join("");
+
+movieListEl.innerHTML = moviesHTML; 
 
 } 
 
-function userHTML(imdbID) {
+function userHTML(movie) {
   
     return `<div class="movie">
     <figure class="movies__Wrapper">
@@ -45,7 +49,7 @@ function userHTML(imdbID) {
 
 setTimeout(() => {
 renderMovies();
-}, 2000);
+});
 
 
 
