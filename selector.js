@@ -29,16 +29,16 @@ function userHTML(movie) {
   
     return `<div class="movie">
     <figure class="movies__Wrapper">
-    <img class="movie__poster" src="${imdbID.Poster}" alt="">
+    <img class="movie__poster" src="${movie.Poster}" alt="">
     </figure>
     <div class="movie__title">
-    ${imdbID.Title}
+    ${movie.Title}
     </div>
     <div class="movie__year">
-    ${imdbID.Year}
+    ${movie.Year}
     </div>
     <div class="movie__imdbID">
-    ${imdbID.imdbID}
+    ${movie.imdbID}
     </div>
     </div>`
     }
@@ -107,4 +107,4 @@ function userHTML(movie) {
     
     //  booksWrapper.innerHTML = booksHtml;
    // } 
-    //
+    //  
