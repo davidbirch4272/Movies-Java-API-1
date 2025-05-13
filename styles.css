@@ -55,7 +55,7 @@
     text-decoration: none;
   }
 
-  .nav__link--about {
+  .nav__link--about, .footer__link--about, .menu__link--about {
     cursor: not-allowed;
   }
 
@@ -121,6 +121,115 @@
     color: white;
   }
 
+.link__hover-effect {
+    position: relative;
+}
+
+.link__hover-effect:after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    height: 3px;
+    width: 0;
+    right: 0;
+    background-color: black;
+    transition: all 300ms ease;
+
+}
+
+.link__hover-effect--white:after {
+    background-color:  #ffff;  
+    }
+
+.link__hover-effect--blue:after  {
+    background-color:  blue;
+    }
+
+.link__hover-effect:hover:after {
+    left: 0;
+    width: 100%;
+}
+
+  .link__hover-effect {
+    position: relative;
+}
+
+.link__hover-effect:after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    height: 3px;
+    width: 0;
+    right: 0;
+    background-color: black;
+    transition: all 300ms ease;
+
+}
+
+.link__hover-effect--white:after {
+    background-color:  #ffff;  
+    }
+
+.link__hover-effect--blue:after  {
+    background-color:  blue;
+    }
+
+.link__hover-effect:hover:after {
+    left: 0;
+    width: 100%;
+}
+
+ /* Breaker between hover effects */
+
+ .menu__hover-effect {
+  position: relative;
+}
+
+.menu__hover-effect:after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  height: 3px;
+  width: 0;
+  right: 0;
+  background-color: black;
+  transition: all 300ms ease;
+
+}
+
+.menu__hover-effect--white:after {
+  background-color:  #ffff;  
+  }
+
+.menu__hover-effect:hover:after {
+  left: 0;
+  width: 100%;
+}
+
+.menu__hover-effect {
+  position: relative;
+}
+
+.menu__hover-effect:after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  height: 3px;
+  width: 0;
+  right: 0;
+  background-color: black;
+  transition: all 300ms ease;
+
+}
+
+.menu__hover-effect--white:after {
+  background-color:  #ffff;  
+  }
+
+.menu__hover-effect:hover:after {
+    left: 0;
+    width: 100%;
+}
 
 
      /* Searcher */
@@ -141,7 +250,8 @@
    }
 
    .background__picture {
-    height: 424px;
+    height: 416px;
+    margin-bottom: 8px;
     
 }    
 
@@ -175,7 +285,7 @@
 
 .fa-solid {
     z-index: 98;
-    transform: translateX(135px) translateY(4px);
+    transform: translateX(115px) translateY(2px);
     
 }
 
@@ -183,14 +293,16 @@
 
 .selector__container {
   padding: 8px 104px;  
-  height: 2100px;
+  height: 300vh;
+
+  /* Here */
 
  }
   .selector__row {
   margin: 0 auto;
   width: 100%;
   /*max-width: 1200px;*/
-  height: 2099px;
+  height: 299vh;
   }
 
 
@@ -203,11 +315,20 @@
     
 }
 
+.coloring {
+  color: blue;
+}
+
 .movie__poster {
   max-height: 380px;
   transition: all 300ms ease;
   /*cursor: not-allowed;*/
   
+}
+
+.movie:hover  .movie__poster {
+  transform: scale(1.03); 
+
 }
 
 select {
@@ -229,6 +350,7 @@ select {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+
   
 }
 
@@ -243,25 +365,28 @@ select {
 .movie__title, .movie__year, .movie__imdbID {
 font-size: 20px;
 margin-bottom: 8px;
+margin-top: 8px;
 }
 
 .movies__loading {   
   display: flex;   
-  justify-content: center;   
   align-items: center;   
+  justify-content: center;   
   width: 100%;   
   padding: 60px 0; 
   
   }  
-  
-  .movies__loading--spinner {   
+
+.movies__loading--spinner {   
   display: block;   
+  
   
   /* The key is to make sure we're only rotating, not translating */   
   
   animation: spin 600ms infinite linear;  
   font-size: 60px;   
   color: blue;   
+  
   
   /* Ensure the element stays centered  */  
   
@@ -400,14 +525,22 @@ flex-direction: column;
   }
 
   .selector__container {
-    height: 710vh;
+    height: 720vh;
   }
 
   .selector__row {
-    height: 709vh;
+    height: 719vh;
   }
 
+  .search__bar {
+    margin-top: 8px;
+  }
+
+#filter {
+margin-top: 8px;
 }
+
+ }
 
 
    
