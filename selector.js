@@ -4,8 +4,8 @@ async function renderMovies(filter = "") {
   const movieTitle = document.querySelector(".search__bar");
   const movieListEl = document.querySelector(".movies__Wrapper");
   
-movieListEl.innerHTML = `<i class="fas fa-spinner movies__loading--spinner"></i>`;
-
+  movieListEl.innerHTML = <div style="width: 100%; display: flex; justify-content: center; align-items: center; height: 200px;"><i class="fas fa-spinner fa-spin" style="font-size: 60px; color: blue;"></i></div>;
+ 
   const movies = await fetch(
     `https://www.omdbapi.com/?apikey=b5972967&s=${movieTitle.value.trim()}`
   );

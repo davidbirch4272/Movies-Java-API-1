@@ -245,36 +245,36 @@ font-size: 20px;
 margin-bottom: 8px;
 }
 
-.movies__loading .movies__loading--spinner {
-  display: none !important;
-}
+.movies__loading {   
 
-.movies__loading .movies__loading--spinner {
-  display: block !important;
-
-}
-
-.fa-spinner {
-  animation: rotate 600ms infinite linear;
-  align-items: center;
-  justify-content: center;
-  padding-top: 60px;
-  font-size: 60px;
-  color: blue;
-
-  }
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-
+  display: flex;   
+  justify-content: center;   
+  align-items: center;   
+  width: 100%;   
+  padding: 60px 0; 
+  
+  }  
+  
+  .movies__loading--spinner {   
+  display: block;   
+  
+  /* The key is to make sure we're only rotating, not translating */   
+  
+  animation: spin 600ms infinite linear;  
+  font-size: 60px;   
+  color: blue;   
+  
+  /* Ensure the element stays centered  */  
+  
+  transform-origin: center center; }  
+  
+  /* Renamed the animation to be more specific */ 
+  
+  @keyframes spin {   
+  
+  0% {     transform: rotate(0deg);   }   
+  
+  100% {     transform: rotate(360deg);   } }
 
 
 /* Footer */
@@ -408,16 +408,8 @@ flex-direction: column;
     height: 709vh;
   }
 
-
-
-
-
 }
 
-
-
-
-/* Here */
 
    
 
