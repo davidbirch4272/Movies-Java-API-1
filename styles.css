@@ -292,8 +292,8 @@
 /* Movies HTML */
 
 .selector__container {
-  padding: 8px 104px;  
-  height: 300vh;
+  padding: 8px 0px;  
+  min-height: 55vh;
 
   /* Here */
 
@@ -302,7 +302,7 @@
   margin: 0 auto;
   width: 100%;
   /*max-width: 1200px;*/
-  height: 299vh;
+  
   }
 
 
@@ -413,6 +413,7 @@ margin-top: 8px;
   
   
   .footer__container {
+    flex: 1;
     padding: 16px 0;
     margin-bottom: 8px;
   }
@@ -457,6 +458,9 @@ margin-top: 8px;
     color: #ffff;
 }
 
+
+
+
  /*TABLETS, LARGE SMARTPHONES*/ 
  @media (max-width: 1023px) { 
 
@@ -465,6 +469,11 @@ margin-top: 8px;
     padding:  8px 28px;
   }
 
+  .container {
+    min-height: 62vh;
+  }
+  
+  
   .title {
     font-size: 18px;
   }
@@ -473,14 +482,6 @@ margin-top: 8px;
     font-size: 18px;
   }
 
-  .selector__container {
-    height: 390vh;
-  }
-
-  .selector__row {
-    height: 389vh;
-  }
-  
   .movie {
   width: calc(100%/2);
   }
@@ -499,15 +500,7 @@ flex-direction: column;
 /* SMALL PHONES, LARGE SMARTPHONES  */ 
 @media (max-width: 843px) {   
 
-  .selector__container {
-    height: 690vh;
-  }
-
-  .selector__row {
-    height: 689vh;
-  }
-
-  .movie {
+ .movie {
     width: 100%;
 }
 
@@ -524,15 +517,7 @@ flex-direction: column;
     display: block;
   }
 
-  .selector__container {
-    height: 720vh;
-  }
-
-  .selector__row {
-    height: 719vh;
-  }
-
-  .search__bar {
+   .search__bar {
     margin-top: 8px;
   }
 
